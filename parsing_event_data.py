@@ -17,7 +17,8 @@ def parse_events(filename):
         whole_data = {}
         for line in f:
             for event in read_events(line):
-                whole_data = whole_data | event
+                # whole_data | event works, but requires python 3.9 or greater
+                whole_data = {**whole_data, **event}
         return json.dumps(whole_data)
 
 if __name__ == "__main__":
