@@ -43,4 +43,4 @@ if __name__ == "__main__":
     print(f'parsed json of events: {events}')
     parsed_json = json.loads(events)
     parsed_json = populate_fifth_event(parsed_json)
-    print(f'json with fifth event added: {parsed_json}')
+    print(f'json with fifth event added: \'{json.dumps(parsed_json)}\'')
